@@ -1,0 +1,19 @@
+{
+  "discounts": [
+    {
+      "code": "SWAG",
+      "name": "SWAG Discount",
+      "price": 25.0
+    },
+    {
+      "code": "VOUCHER2x1",
+      "name": "2-for-1 VOUCHER Discount",
+      "price": 5.0
+    },
+    {
+      "code": "BULK_TSHIRT",
+      "name": "Bulk TSHIRT Discount",
+      "price": 19.0
+    }
+  ]
+}
