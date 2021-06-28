@@ -15,5 +15,44 @@
       "name": "Bulk TSHIRT Discount",
       "price": 19.0
     }
+  ],
+  "new_discounts": [
+    {
+      "items": [
+        {
+          "name": "VOUCHER",
+          "amount": 1
+        },
+        {
+            "name": "TSHIRT",
+            "amount": 1
+        },
+        {
+            "name": "MUG",
+            "amount": 1
+        }
+      ],
+      "price": 25,
+      "type": "greater"
+    },
+    {
+        "items": [
+          {
+            "name": "VOUCHER",
+            "amount": 2
+          }
+        ],
+        "price": 5,
+        "type": "multiple"
+      },
+      {
+        "items": [
+          {
+            "name": "TSHIRT",
+            "amount": 2
+          }
+        ],
+        "price": 5
+      }
   ]
 }
