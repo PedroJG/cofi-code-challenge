@@ -5,6 +5,13 @@ prod_file = "products.json"
 disc_file = "discounts.json"
 
 
+class ProductNotRegisteredError(Exception):
+    def __init__(self, prod_code):
+        self.prod_code = prod_code
+        self.message = f'{self.prod_code} is not a registered product'
+        super().__init__(self.message)
+
+
 class Product:
     def __init__(self, code, name, price):
         self.code = code
@@ -103,7 +110,10 @@ class Store:
     def scan(self, code):
         # Dict.get(key, default_value) returns the value of key
         # or default_value if it is not defined, instead of raising KeyError
-        self._cart[code] = self._cart.get(code, 0) + 1
+        if code in self._products:
+            self._cart[code] = self._cart.get(code, 0) + 1
+        else:
+            raise ProductNotRegisteredError(code)
 
     def clear_cart(self):
         self._cart = {}
