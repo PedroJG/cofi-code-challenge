@@ -113,6 +113,9 @@ class Store:
     def scan(self, code):
         # Dict.get(key, default_value) returns the value of key
         # or default_value if it is not defined, instead of raising KeyError
+        
+        # This function raises ProductNotRegisteredError (defined above) if the product
+        # to register is not defined in the products.json file
         if code in self._products:
             self._cart[code] = self._cart.get(code, 0) + 1
         else:
