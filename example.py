@@ -1,6 +1,6 @@
-from store import Store
+from store import store
 
-app = Store()
+app = store.Store()
 
 app.scan("VOUCHER")
 app.scan("VOUCHER")

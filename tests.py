@@ -1,7 +1,8 @@
 import unittest
-from store import Store, ProductNotRegisteredError
+from store import store
+from store.store import ProductNotRegisteredError
 
-app = Store()
+app = store.Store()
 
 
 class Tests(unittest.TestCase):
