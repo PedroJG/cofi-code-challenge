@@ -1,8 +1,11 @@
 import json
 from collections import Counter
+import os
 
-prod_file = "products.json"
-disc_file = "discounts.json"
+script_path = os.path.dirname(os.path.abspath(__file__))
+
+prod_file = os.path.join(script_path, "resources/products.json")
+disc_file = os.path.join(script_path, "resources/discounts.json")
 
 
 class ProductNotRegisteredError(Exception):
